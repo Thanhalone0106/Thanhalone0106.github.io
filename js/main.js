@@ -12,7 +12,56 @@ let val = 2;//giá trị update
 let left;//vị trí cho khoảng update
 let right;//vị trí cho khoảng update
 let x=0;
+let random=0;
+let check=0;
+let y=0;
+function AutoRefresh( t ) {
+    setTimeout("location.reload(true);", t);
+ }
 
+let do_alert = setTimeout(draw,3000);
+
+function clearAlert()
+{
+  clearTimeout(do_alert);
+}
+function checks(){
+    if(random==check){
+        setup2();
+        if(nums.length>=1&&nums.length<=8)
+        {
+        tree.draw();
+        tree.draw_number_node(nums);
+        noLoop();
+       // tree.draw_build_imd();
+      
+        tree.draw_build();
+        random=Math.floor(Math.random() * 50) + 1;
+        }
+        else{
+            alert('Giới hạn phạm vi nhỏ hơn 9');
+        }
+    }
+    else{
+        alert("Đợi chương trình chạy hoặc reset");
+    }
+}
+function check2(){
+    setup1();
+    if(nums.length>=1&&nums.length<=8)
+    {
+    tree.draw();
+    tree.draw_number_node(nums);
+    noLoop();
+   // tree.draw_build_imd();
+  
+    tree.draw_build();
+    random=Math.floor(Math.random() * 50) + 1;
+    }
+    else{
+        alert('Giới hạn phạm vi nhỏ hơn 9');
+    }
+}
 function setup1() {
     width = windowWidth - 30;
     height = windowHeight - 50;
@@ -103,36 +152,7 @@ function setup3(){
 }
 function draw() {
     // tree.getquery(segTree,qs,qe,segTree.length);
-    if(nums.length>=1&&nums.length<=8)
-    {
-    tree.draw();
-    tree.draw_number_node(nums);
-    noLoop();
-   // tree.draw_build_imd();
-  
-    tree.draw_build();
-    
-
-    //qs=3, đại diện cho Left, qe=2 đại diện cho Right  //đoạn truy vấn sai không cho truy vấn   
-    //if(qs<qe || qs<0 ||qe<0||qe>nums.length-1)
-    //aleart()// gửi thông báo hoặc in dòng chữ ra man hinh //tự chọn
-    // if(x==1){
-    //     //tree.draw_minquery(input_l,input_r);
-    // }
-    // else if(x==2){ 
-    //     setTimeout(()=>{tree.draw_maxquery(input_l,input_r);},tree.time_build+3000);
-    // }
-    // else {
-    //     setTimeout(()=>{tree.draw_sumquery(input_l,input_r);},tree.time_build+3000);
-    // }
-  
-    //truy vấn của cây sum hoặc max
-    //setTimeout(()=>{tree.draw_maxquery(1,6);},tree.time_build+3000);
-    //setTimeout(()=>{tree.draw_sumquery(1,6);},tree.time_build+3000);
-    }
-    else{
-        alert('Giới hạn phạm vi nhỏ hơn 9');
-    }
+   
 }
 function draw_query(){
 

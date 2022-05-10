@@ -686,6 +686,7 @@ class Tree {
             console.log(time);
             this.time_build=time;
     }
+
     draw_build_imd(){
         for(let i=0;i<=this.id_max;i++){
             if(this.node_list[i].value!=0){
@@ -700,6 +701,7 @@ class Tree {
         
         
     }
+    
     check_query(qs,qe,node){
         let check=0;
         if(qs < 0||qe <0 || qs > qe){

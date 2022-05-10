@@ -45,7 +45,10 @@ html {
     display: inline-block;
   
 }
-
+@media screen and (max-width: 3000px) {
+    .left, .main, .right {
+      width: 100%; /* Độ rộng là 100% khi viewport là 800px hoặc nhỏ hơn */
+     }
 #title{
     position: absolute;
     height:50px;

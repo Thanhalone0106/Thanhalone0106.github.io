@@ -73,13 +73,16 @@
 <div id="actions-extras">
 <div class="create action-menu-pullout" id="create_action">
 <div id="create-input" class="new-menu-option">
-values = <input id="v-create" type="text" style="width: 175px;" title="Enter comma-separated integers" placeholder="Nhập giá trị" autocomplete="off" value=""> </div>
-<div id="create-go" class="execAction new-menu-option coloured-menu-option" onClick="setup1(),draw()">
+ <input id="v-create" type="text" style="width: 175px;" title="Enter comma-separated integers" placeholder="Nhập giá trị" autocomplete="off" value="24,56,12,34 "> </div>
+<div id="create-go" class="execAction new-menu-option coloured-menu-option" onClick="check2()">
 <p>Go</p>
 </div>
-<div id="create-random" class="execAction new-menu-option coloured-menu-option" onClick="setup2(),draw()">
+<div id="create-random" class="execAction new-menu-option coloured-menu-option" onClick=" checks()" > 
 <p>Random</p>
 </div>
+<div id="create-random-sorted" class="execAction new-menu-option coloured-menu-option" onClick="AutoRefresh(0)">
+  <p>Reset</p>
+  </div>
 <div id="create-err" class="err" style="float: left;"></div>
 </div>
 <div class="rmq action-menu-pullout" id="rmq_action">
